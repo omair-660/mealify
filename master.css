@@ -444,7 +444,7 @@ svg {
   position: absolute;
   top:22px;
   right: 20px;
-  height:50% ;
+  height: ;
   color:#9c9c9c;
   font-size: 18px;
   transform: translateX(200%);
@@ -719,7 +719,7 @@ input[type="submit"]:hover{
   background-color: var(--hover-color);
 }
 .footer i{
-  margin-right: 5px;
+  margin-right: 8px;
 }
 .footer .linkss {
     display: flex;
