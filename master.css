@@ -633,7 +633,7 @@ input[type="submit"]:hover{
   background-color: var(--hover-color);
 }
 .footer{
-  background-image: url("");
+  background-image: url("footer.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
