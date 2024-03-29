@@ -764,3 +764,6 @@ input[type="submit"]:hover{
 .c a{
   color: var(--btn-color);
 }
+.dark ::placeholder{
+  color:#aaa;
+}
