@@ -1,30 +1,41 @@
-body = document.getElementById("body");
-moon = document.getElementById("moon");
-sun = document.getElementById("sun");
+let body = document.getElementById("body");
+let moon = document.getElementById("moon");
+let sun = document.getElementById("sun");
+
+if (localStorage.getItem("darkMode") === "true") {
+  body.classList.add("dark");
+  moon.classList.add("none");
+  sun.classList.add("darkMode");
+}
 
 moon.onclick = function () {
   body.classList.add("dark");
-  moon.classList.add("none") ;
-  sun.classList.add("darkMode")  ;
-}
-sun.onclick = function () {
-    body.classList.remove("dark");
-    moon.classList.remove("none") ;
-  sun.classList.remove("darkMode")  ;
-}
+  moon.classList.add("none");
+  sun.classList.add("darkMode");
+  localStorage.setItem("darkMode", "true");
+};
 
-links = document.getElementById("links");
-hum = document.getElementById("hum");
+sun.onclick = function () {
+  body.classList.remove("dark");
+  moon.classList.remove("none");
+  sun.classList.remove("darkMode");
+  localStorage.setItem("darkMode", "false");
+};
+
+
+
+let links = document.getElementById("links");
+let hum = document.getElementById("hum");
 
 hum.onclick = function () {
   links.classList.toggle("open");
   hum.classList.toggle("active");
 }
 
-home = document.getElementById("home");
-chefs = document.getElementById("chefs");
-gallery = document.getElementById("gallery");
-contact = document.getElementById("contact");
+let home = document.getElementById("home");
+let chefs = document.getElementById("chefs");
+let gallery = document.getElementById("gallery");
+let contact = document.getElementById("contact");
 
 home.onclick = function () {
   home.classList.add("on");
