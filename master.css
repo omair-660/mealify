@@ -120,17 +120,19 @@ nav .links ul li a{
 nav .links ul li a.on{
   color:var(--h3-color) ;
 }
-nav .links ul li a.on::before{
+nav .links ul li a::before{
   position: absolute;
   content: '';
-  bottom: -25px;
+  bottom: -24px;
   left: 0;
   background-color: var(--btn-color);
-  width: 100%;
+  width:0;
   height: 3px;
   transition: 0.5s;
 }
-
+nav .links ul li a.on::before{
+  width: 100%;
+}
 nav .dark i{
   font-size: 22px;
 }
@@ -452,7 +454,7 @@ svg {
   color:#9c9c9c;
   font-size: 18px;
   transform: translateX(200%);
-  transition: 0.5s;
+  transition: 0.5s 0.6s;
 }
 .chefs i{
   padding: 8px 0;
@@ -506,6 +508,7 @@ i{
   margin: 40px auto;
 }
 .gellary img{
+  transition: .4s;
   width: 100%;
 }
 .gellary .box{
@@ -513,13 +516,14 @@ i{
   break-inside: avoid;
   position: relative;
   overflow: hidden;
+  border: 4px solid #eee;
 }
 .gellary .box .layer{
   position: absolute;
   top: 200%;
   left: 50%;
   transform: translate(-50%,-50%);
-  transition: 0.5s;
+  transition: .9s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -534,6 +538,9 @@ i{
 }
 .gellary .box h2,.gellary .box p {
   color: #eee;
+}
+.gellary .box:hover img{
+  transform: scale(1.1);
 }
 .gellary .box  p {
   line-height: 1.6;
@@ -749,6 +756,11 @@ input[type="submit"]:hover{
   background: #50505054;
   transform: translateX(5px);
 }
+.footer .box3 a:hover{
+  padding-left: 0;
+  transform: translate(0);
+  background: unset
+}
 .footer .box3 i{
   color:var(--btn-color);
 }
@@ -759,6 +771,13 @@ input[type="submit"]:hover{
 .footer .contaner {
   flex-wrap: wrap;
 }
+  .inp2{
+    flex-direction: column;
+    row-gap: 9px
+  }
+  .inp2 button , .inp2 input {
+    width:100%;
+  }
 }
 .c{
   text-align: center;
